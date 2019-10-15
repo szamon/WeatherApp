@@ -29,7 +29,7 @@ function getWeather(data){
             $(".weatherIcon")[0].src = "https://openweathermap.org/img/wn/"+data.list[0].weather[0].icon+"@2x.png";
             $(".temp")[0].innerHTML = Math.round((data.list[0].main.temp - 30)/1.8)/10+"°C";
             $(".humidity")[0].innerHTML = "Humidity: "+data.list[0].main.humidity+"%";
-            $(".pressure")[0].innerHTML = "Pressure: "+data.list[0].main.humidity+"hPa";
+            $(".pressure")[0].innerHTML = "Pressure: "+data.list[0].main.pressure+"hPa";
             $(".tempMax")[0].innerHTML = "Temperature Max: "+Math.round((data.list[0].main.temp_max - 30)/1.8)/10+"°C";
             $(".tempMin")[0].innerHTML = "Temperature Min: "+Math.round((data.list[0].main.temp_min - 30)/1.8)/10+"°C";
         }
