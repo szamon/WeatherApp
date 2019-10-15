@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./main.css">
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <div class="container-fluid bg-info">
+      <div class="row vh-100">
+        <div class="col-sm-3 align-self-center">
+          <h3 class=" header text-white text-center">Extremely nice<br> Weather App!</h3>
+        </div>
+        <div class="col bg-white h-100">
+          <div class="row h-100"">
+            <div class="col-4 col-md-6 align-self-center">
+              <form onSubmit="return getWeather();">
+                <div class="form-row">
+                  <div class="col">
+                    <label class="text-justify" for="inputCity">Enter some city to check the weather there!</label>
+                    <input type="text" class="form-control" placeholder="City" id="inputCity">
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-primary btn-sm mt-2">Check!</button>
+              </form>  
+            </div>
+            <div class="col-6 align-self-center cityData">
+              <img class="loadingGif" src="./img/loading.gif" alt="loading">
+              <div class="jumbotron jumbotron-fluid" style="min-width: 12rem">
+                <div class="container">
+                  <h3 class="cityName"></h3>
+                  <img class="weatherIcon bg-primary rounded" src="" alt="weather icon">
+                  <h2 class="display-4 temp"></h2>
+                  <p class="lead humidity"></p>
+                  <p class="lead pressure"></p>
+                  <p class="lead tempMax"></p>
+                  <p class="lead tempMin"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="fixed-bottom text-center text-white bg-dark">
+      by Szymon Majewski
+    </footer>
+  </body>
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+  <script src="./app.js"></script>
+</html>

@@ -1,0 +1,9 @@
+/* div{
+    border: 1px solid black;
+} */
+.header, footer{
+    font-family: "Quicksand", sans-serif;
+}
+footer{
+    font-style: italic;
+}
