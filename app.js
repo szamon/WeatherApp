@@ -19,12 +19,11 @@ function getWeather(data){
         },
         error: function(){
             $(".loadingGif").hide();
-            alert("There is no such city. Please try again!")
+            alert("There is no such city. Please try again!");
         },
         success: function(data){
             $(".loadingGif").hide();
             $(".jumbotron").show();
-            console.log(data.city, data.list[0]);
             $(".cityName")[0].innerHTML = data.city.name;
             $(".weatherIcon")[0].src = "https://openweathermap.org/img/wn/"+data.list[0].weather[0].icon+"@2x.png";
             $(".temp")[0].innerHTML = Math.round((data.list[0].main.temp - 30)/1.8)/10+"°C";
@@ -35,5 +34,3 @@ function getWeather(data){
         }
     });
 };
-
-//getWeather();
