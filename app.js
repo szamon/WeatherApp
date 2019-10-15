@@ -5,7 +5,7 @@ function getWeather(data){
     event.preventDefault();
     const key = "&APPID=57841f1f3af1767042ead8873a280b61";
     const city = document.getElementById("inputCity").value;
-    var link = "http://api.openweathermap.org/data/2.5/forecast?q=";
+    var link = "https://api.openweathermap.org/data/2.5/forecast?q=";
     const url = link + city + key;
     $.ajax({
         url: url,
@@ -26,7 +26,7 @@ function getWeather(data){
             $(".jumbotron").show();
             console.log(data.city, data.list[0]);
             $(".cityName")[0].innerHTML = data.city.name;
-            $(".weatherIcon")[0].src = "http://openweathermap.org/img/wn/"+data.list[0].weather[0].icon+"@2x.png";
+            $(".weatherIcon")[0].src = "https://openweathermap.org/img/wn/"+data.list[0].weather[0].icon+"@2x.png";
             $(".temp")[0].innerHTML = Math.round((data.list[0].main.temp - 30)/1.8)/10+"°C";
             $(".humidity")[0].innerHTML = "Humidity: "+data.list[0].main.humidity+"%";
             $(".pressure")[0].innerHTML = "Pressure: "+data.list[0].main.humidity+"hPa";
