@@ -1,7 +1,4 @@
-$(".loadingGif").hide();
-$(".jumbotron").hide();
-
-function getWeather(data){
+function getWeather(){
     event.preventDefault();
     const key = "&APPID=57841f1f3af1767042ead8873a280b61";
     const city = document.getElementById("inputCity").value;
@@ -34,3 +31,4 @@ function getWeather(data){
         }
     });
 };
+
